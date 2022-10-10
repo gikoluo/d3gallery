@@ -15,7 +15,7 @@ class D3ModelController extends Controller
      */
     public function index()
     {
-        //
+        return D3Model::select('id','name','description','url')->get();
     }
 
     /**
@@ -47,7 +47,9 @@ class D3ModelController extends Controller
      */
     public function show(D3Model $d3Model)
     {
-        //
+        return response()->json([
+            'd3Model'=>$d3Model
+        ]);
     }
 
     /**

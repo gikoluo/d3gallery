@@ -27,6 +27,11 @@ php artisan make:model D3Model --all
 
 php artisan migrate
 
+php artisan storage:link
+
+
+curl http://localhost:80/api/d3models
+
 
 php artisan make:migration update_d3model_id_to_uuid_table --table=d3models
 
