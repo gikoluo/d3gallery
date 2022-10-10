@@ -28,6 +28,12 @@ class PlatformProvider extends OrchidServiceProvider
     public function registerMainMenu(): array
     {
         return [
+            Menu::make('D3 Model')
+                ->icon('envelope-letter')
+                ->route('platform.d3model.list')
+                ->title('D3 Models'),
+
+
             Menu::make('Example screen')
                 ->icon('monitor')
                 ->route('platform.example')

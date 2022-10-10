@@ -18,6 +18,7 @@ class D3Model extends Model
      * @var array
      */
     protected $fillable = [
+        'id',
         'name',
         'url',
         'description',

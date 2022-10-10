@@ -28,11 +28,22 @@ php artisan make:model D3Model --all
 php artisan migrate
 
 
+php artisan make:migration update_d3model_id_to_uuid_table --table=d3models
+
 ## Install admin panel
 composer require orchid/platform
 php artisan orchid:install
 
 php artisan orchid:admin chunhui chunhui@thecela.com chunhuiluo
+
+
+
+php artisan orchid:screen D3ModelEditScreen
+php artisan orchid:screen D3ModelListScreen
+php artisan orchid:table D3ModelListLayout
+
+
+
 
 
 ## About Laravel

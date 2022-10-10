@@ -18,6 +18,12 @@ use App\Orchid\Screens\User\UserProfileScreen;
 use Illuminate\Support\Facades\Route;
 use Tabuna\Breadcrumbs\Trail;
 
+
+use App\Orchid\Screens\D3ModelEditScreen;
+use App\Orchid\Screens\D3ModelListScreen;
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Dashboard Routes
@@ -104,6 +110,13 @@ Route::screen('example', ExampleScreen::class)
             ->parent('platform.index')
             ->push('Example screen');
     });
+
+// D3Model
+Route::screen('d3model/{post?}', D3ModelEditScreen::class)
+    ->name('platform.d3model.edit');
+
+Route::screen('d3models', D3ModelListScreen::class)
+    ->name('platform.d3model.list');
 
 Route::screen('example-fields', ExampleFieldsScreen::class)->name('platform.example.fields');
 Route::screen('example-layouts', ExampleLayoutsScreen::class)->name('platform.example.layouts');
