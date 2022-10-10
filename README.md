@@ -18,7 +18,21 @@ Thank you! We hope you build something incredible. Dive in with: cd d3gallery &&
 
 ## Code
 
-php artisan make:model Model
+php artisan make:model D3Model
+
+
+php artisan make:model D4Model --migration
+
+php artisan make:model D3Model --all
+
+php artisan migrate
+
+
+## Install admin panel
+composer require orchid/platform
+php artisan orchid:install
+
+php artisan orchid:admin chunhui chunhui@thecela.com chunhuiluo
 
 
 ## About Laravel
