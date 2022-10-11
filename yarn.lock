@@ -319,6 +319,11 @@
     "@jridgewell/resolve-uri" "3.1.0"
     "@jridgewell/sourcemap-codec" "1.4.14"
 
+"@pmndrs/cannon-worker-api@^2.1.0":
+  "integrity" "sha512-IS1Ewx4PPkz/mAAzfiKy0HtEIECtkwDsAvErEQdEn0EbVUAEnh5f0Pdnv3/1k4afZfuDj0AO+87JlbBcUUpRTw=="
+  "resolved" "https://registry.npmjs.org/@pmndrs/cannon-worker-api/-/cannon-worker-api-2.2.0.tgz"
+  "version" "2.2.0"
+
 "@popperjs/core@^2.10.2", "@popperjs/core@^2.11.5", "@popperjs/core@^2.11.6":
   "integrity" "sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw=="
   "resolved" "https://registry.npmjs.org/@popperjs/core/-/core-2.11.6.tgz"
@@ -576,6 +581,15 @@
   "resolved" "https://registry.npmjs.org/@react-spring/types/-/types-9.5.5.tgz"
   "version" "9.5.5"
 
+"@react-three/cannon@^6.4.0":
+  "integrity" "sha512-hrT7ploQOCKyP/vVSm9RWN2r2WPxjpTHDNnkxzwa/doK3IyREJ+40Ghor7E7pf76sjRgJFBrypVUSpKDcescTA=="
+  "resolved" "https://registry.npmjs.org/@react-three/cannon/-/cannon-6.4.0.tgz"
+  "version" "6.4.0"
+  dependencies:
+    "@pmndrs/cannon-worker-api" "^2.1.0"
+    "cannon-es" "^0.20.0"
+    "cannon-es-debugger" "^1.0.0"
+
 "@react-three/csg@^1.1.5":
   "integrity" "sha512-b/xejsRHPjwDtd44X8VtoLkXC+Vc/PRt/SqA5dSYocn3efFZkk0CZCubDhAzR0rj+Ydbqr3AXVPWPo6YLqRIHw=="
   "resolved" "https://registry.npmjs.org/@react-three/csg/-/csg-1.1.5.tgz"
@@ -608,7 +622,7 @@
     "utility-types" "^3.10.0"
     "zustand" "^3.5.13"
 
-"@react-three/fiber@^8.0.12", "@react-three/fiber@^8.8.9", "@react-three/fiber@>=6.0", "@react-three/fiber@>=7.0", "@react-three/fiber@>=8.0":
+"@react-three/fiber@^8.0.12", "@react-three/fiber@^8.8.9", "@react-three/fiber@>=6.0", "@react-three/fiber@>=7.0", "@react-three/fiber@>=8", "@react-three/fiber@>=8.0":
   "integrity" "sha512-TGeDm6EieaQ/ckRPC0rbG0ntHjWO7xp7eLRh4ZFqQ5BzCqIO+mA3QXLzAuVItL1Y32OuBdXC28iqVHWOw2AWCw=="
   "resolved" "https://registry.npmjs.org/@react-three/fiber/-/fiber-8.8.9.tgz"
   "version" "8.8.9"
@@ -831,6 +845,16 @@
   "integrity" "sha512-oIs7+JL3K9JRQ3jPZjlH6qyYDp+nBTCais7hjh0s+fuBwufc7uZ7hPYMXrDOJhV360KGMTcczMRObk0/iMqZRg=="
   "resolved" "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001418.tgz"
   "version" "1.0.30001418"
+
+"cannon-es-debugger@^1.0.0":
+  "integrity" "sha512-sE9lDOBAYFKlh+0w+cvWKwUhJef8HYnUSVPWPL0jD15MAuVRQKno4QYZSGxgOoJkMR3mQqxL4bxys2b3RSWH8g=="
+  "resolved" "https://registry.npmjs.org/cannon-es-debugger/-/cannon-es-debugger-1.0.0.tgz"
+  "version" "1.0.0"
+
+"cannon-es@^0.20.0", "cannon-es@0.x":
+  "integrity" "sha512-eZhWTZIkFOnMAJOgfXJa9+b3kVlvG+FX4mdkpePev/w/rP5V8NRquGyEozcjPfEoXUlb+p7d9SUcmDSn14prOA=="
+  "resolved" "https://registry.npmjs.org/cannon-es/-/cannon-es-0.20.0.tgz"
+  "version" "0.20.0"
 
 "chalk@^2.0.0":
   "integrity" "sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ=="
@@ -1556,7 +1580,7 @@
   dependencies:
     "debounce" "^1.2.1"
 
-"react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16 || ^17", "react@^16.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0-rc.1 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16.3.0", "react@>= 16.8", "react@>= 16.8.0", "react@>=0.14.0", "react@>=15.0.0", "react@>=16.13", "react@>=16.14.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@>=17.0", "react@>=18.0", "react@0.14 || 15 || 16 || 17 || 18":
+"react@^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0", "react@^16 || ^17", "react@^16.0 || ^17.0.0 || ^18.0.0", "react@^16.8 || ^17.0", "react@^16.8.0 || ^17.0.0 || ^18.0.0", "react@^16.8.0 || ^17.0.0-rc.1 || ^18.0.0", "react@^18.0.0", "react@^18.2.0", "react@>= 16.3.0", "react@>= 16.8", "react@>= 16.8.0", "react@>=0.14.0", "react@>=15.0.0", "react@>=16.13", "react@>=16.14.0", "react@>=16.6.0", "react@>=16.8", "react@>=16.8.0", "react@>=17.0", "react@>=18", "react@>=18.0", "react@0.14 || 15 || 16 || 17 || 18":
   "integrity" "sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ=="
   "resolved" "https://registry.npmjs.org/react/-/react-18.2.0.tgz"
   "version" "18.2.0"
@@ -1734,7 +1758,7 @@
   "resolved" "https://registry.npmjs.org/three/-/three-0.141.0.tgz"
   "version" "0.141.0"
 
-"three@^0.144.0", "three@>= 0.123.0", "three@>= 0.125.0 < 0.145.0", "three@>=0.103.0", "three@>=0.122.0", "three@>=0.126", "three@>=0.133", "three@>=0.136.0", "three@>=0.137", "three@>=0.139.2", "three@>=0.141.0":
+"three@^0.144.0", "three@>= 0.123.0", "three@>= 0.125.0 < 0.145.0", "three@>=0.103.0", "three@>=0.122.0", "three@>=0.126", "three@>=0.133", "three@>=0.136.0", "three@>=0.137", "three@>=0.139", "three@>=0.139.2", "three@>=0.141.0", "three@0.x":
   "integrity" "sha512-R8AXPuqfjfRJKkYoTQcTK7A6i3AdO9++2n8ubya/GTU+fEHhYKu1ZooRSCPkx69jbnzT7dD/xEo6eROQTt2lJw=="
   "resolved" "https://registry.npmjs.org/three/-/three-0.144.0.tgz"
   "version" "0.144.0"

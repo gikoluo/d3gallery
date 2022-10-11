@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 import CardGroup from 'react-bootstrap/CardGroup';
-import { Cube, Bruno, SSR2, Envmap, Porsche911 } from '../D3Models/Sample';
+import { Cube, Bruno, SSR2, Envmap, Porsche911, Balls } from '../D3Models/Sample';
 import moment from "moment";
 
 
@@ -17,6 +17,7 @@ function ModelList(model) {
         "SSR2": <SSR2 />,
         "Envmap": <Envmap />,
         "Porsche911": <Porsche911 />,
+        "Balls": <Balls />,
     };
     return models
 }
@@ -40,26 +41,24 @@ export default function Index() {
 
     return (
         <Row className="g-4">
-            {/* <Card key="sample">
-                <Card.Body>
-                    <Card.Title>Sample</Card.Title>
-                </Card.Body>
+            {/* <Col>
+                    <Card >
+                        <Card.Body>
+                            <Card.Title>Sample</Card.Title>
+                        </Card.Body>
 
-                {/* <Cube />
-                <Bruno />
-                <SSR2 />
-                <Envmap />
-                <Porsche911 /> */}
+                        <Balls />
 
-                {/* <Card.Body>
-                    <Card.Text>
-                    Desc
-                    </Card.Text>
-                </Card.Body>
-                <Card.Footer>
-                    <small className="text-muted">Last updated 3 mins ago</small>
-                </Card.Footer>
-            </Card>  */}
+                        <Card.Body>
+                            <Card.Text>
+                            Sample
+                            </Card.Text>
+                        </Card.Body>
+                        <Card.Footer>
+                            <small className="text-muted">Created at: 00</small>
+                        </Card.Footer>
+                    </Card>
+                    </Col> */}
         {
             d3models.length > 0 && (
                 d3models.map((row, key)=>(
