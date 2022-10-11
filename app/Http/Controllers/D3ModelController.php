@@ -15,7 +15,7 @@ class D3ModelController extends Controller
      */
     public function index()
     {
-        return D3Model::select('id','name','description','url')->get();
+        return D3Model::select('id','name','description','html','created_at')->get();
     }
 
     /**

@@ -20,7 +20,7 @@ class D3Model extends Model
     protected $fillable = [
         'id',
         'name',
-        'url',
+        'html',
         'description',
     ];
 

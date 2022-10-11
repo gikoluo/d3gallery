@@ -32,7 +32,7 @@ class D3ModelListLayout extends Table
                     return Link::make($d3model->name)
                         ->route('platform.d3model.edit', $d3model);
                 }),
-            TD::make('url', 'Url'),
+            TD::make('html', 'Html'),
             TD::make('description', 'Description'),
             TD::make('created_at', 'Created'),
             TD::make('updated_at', 'Last edit'),

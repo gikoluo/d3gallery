@@ -27,7 +27,6 @@ php artisan make:model D3Model --all
 
 php artisan migrate
 
-
 php artisan make:migration update_d3model_id_to_uuid_table --table=d3models
 
 
@@ -46,7 +45,7 @@ npm install && npm run dev
 
 npm install react-bootstrap bootstrap
 
-
+yarn add @react-three/csg
 
 
 

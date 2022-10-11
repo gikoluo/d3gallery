@@ -128,18 +128,15 @@ class D3ModelEditScreen extends Screen
                     ->placeholder('Attractive but mysterious name')
                     ->help('Specify a short descriptive title for this model.'),
 
-                Input::make('d3model.url')
-                    ->title('Model Url')
-                    ->placeholder('Model url or path'),
+                Input::make('d3model.html')
+                    ->title('Model Html')
+                    ->placeholder('Model html or path'),
 
                 TextArea::make('d3model.description')
                     ->title('Description')
                     ->rows(3)
                     ->maxlength(200)
                     ->placeholder('Brief description for preview'),
-
-                
-
 
             ])
         ];
