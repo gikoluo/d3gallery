@@ -36,17 +36,17 @@ export default function Index() {
     const [isOpen, setIsOpen] = React.useState(false);
     const [title, setTitle] = React.useState("Demo...");
     const [description, setDescription] = React.useState("Demo...");
-    
+
     const [body, setBody] = React.useState("Demo...");
 
     const isFullscreen = true
 
-    useEffect(()=>{
+    useEffect(() => {
         fetchD3Models()
-    },[])
+    }, [])
 
     const fetchD3Models = async () => {
-        await axios.get(`/api/d3models`).then(({data})=>{
+        await axios.get(`/api/d3models`).then(({ data }) => {
             setD3Models(data)
         })
     }
@@ -66,20 +66,20 @@ export default function Index() {
 
     return (
         <>
-         <Modal show={isOpen} fullscreen={isFullscreen} onHide={hideModal} onEntered={modalLoaded}>
-            <Modal.Header closeButton>
-                <Modal.Title>{title}</Modal.Title>
-            </Modal.Header>
-            <Modal.Body>
-                <ModelHtml model={selectedD3Model.html} />
-            </Modal.Body>
-            <Modal.Footer>
-            {description}
-            </Modal.Footer>
-        </Modal>
-            
-        <Row className="g-4">
-            {/* <Col>
+            <Modal show={isOpen} fullscreen={isFullscreen} onHide={hideModal} onEntered={modalLoaded}>
+                <Modal.Header closeButton>
+                    <Modal.Title>{title}</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <ModelHtml model={selectedD3Model.html} />
+                </Modal.Body>
+                <Modal.Footer>
+                    {description}
+                </Modal.Footer>
+            </Modal>
+
+            <Row className="g-4">
+                {/* <Col>
                     <Card >
                         <Card.Body>
                             <Card.Title>Sample</Card.Title>
@@ -97,44 +97,44 @@ export default function Index() {
                         </Card.Footer>
                     </Card>
                     </Col> */}
-        {
-            d3models.length > 0 && (
-                d3models.map((row, key)=>(
-                    <Col key={row.id} id={"d3model-" + row.id}>
-                    <Card >
-                        <Card.Header>
-                            <Row>
-                                <Col xs="10">{row.name}</Col>
-                                <Col xs="2">
-                                    <Button
-                                    size="sm"
-                                    className="float-end"
-                                    variant="link"
-                                    onClick={() => { setSelectedD3Model(row); showModal()} }>
-                                    <Icon.ArrowsFullscreen className="align-top" />
-                                    </Button>
-                                </Col>
-                            </Row>
-                        </Card.Header>
-                        <Card.Body>
-                            <ModelHtml model={row.html} />
-                            
-                        </Card.Body>
+                {
+                    d3models.length > 0 && (
+                        d3models.map((row, key) => (
+                            <Col key={row.id} id={"d3model-" + row.id}>
+                                <Card >
+                                    <Card.Header>
+                                        <Row>
+                                            <Col xs="10">{row.name}</Col>
+                                            <Col xs="2">
+                                                <Button
+                                                    size="sm"
+                                                    className="float-end"
+                                                    variant="link"
+                                                    onClick={() => { setSelectedD3Model(row); showModal() }}>
+                                                    <Icon.ArrowsFullscreen className="align-top" />
+                                                </Button>
+                                            </Col>
+                                        </Row>
+                                    </Card.Header>
+                                    <Card.Body>
+                                        <ModelHtml model={row.html} />
 
-                        <Card.Body>
-                            <Card.Text>
-                            {row.description}
-                            </Card.Text>
-                        </Card.Body>
-                        <Card.Footer>
-                            <small className="text-muted">Created at: {moment(row.created_at).format("MMMM Do YYYY")}</small>
-                        </Card.Footer>
-                    </Card>
-                    </Col>
-                ))
-            )
-        }
-    </Row>   
-    </>
-  )
+                                    </Card.Body>
+
+                                    <Card.Body>
+                                        <Card.Text>
+                                            {row.description}
+                                        </Card.Text>
+                                    </Card.Body>
+                                    <Card.Footer>
+                                        <small className="text-muted">Created at: {moment(row.created_at).format("MMMM Do YYYY")}</small>
+                                    </Card.Footer>
+                                </Card>
+                            </Col>
+                        ))
+                    )
+                }
+            </Row>
+        </>
+    )
 }
